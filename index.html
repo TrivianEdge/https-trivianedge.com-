@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrivianEdge - Results that Speak</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.20.15/babel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" data-presets="env,react">
+    function HeroSection() {
+      return (
+        <section 
+          className="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-gradient-to-r from-[#141933] to-[#1B2950] font-inter"
+          role="banner" 
+          aria-label="TrivianEdge Results that Speak Hero Section"
+        >
+          {/* Animated Aurora Overlay SVG */}
+          <svg 
+            className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none opacity-56 mix-blend-lighter"
+            style={{ filter: 'blur(9px) brightness(1.09) saturate(1.22)' }}
+            viewBox="0 0 1440 900" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <radialGradient id="a1" cx="55%" cy="32%" r="0.8">
+                <stop stopColor="#41C300" stopOpacity="0.33"/>
+                <stop offset="0.6" stopColor="#3E990A" stopOpacity="0.12"/>
+                <stop offset="1" stopColor="#1B2950" stopOpacity="0.00"/>
+              </radialGradient>
+            </defs>
+            <ellipse cx="680" cy="350" rx="420" ry="240" fill="url(#a1)"/>
+            <ellipse cx="1150" cy="420" rx="130" ry="68" fill="#3E990A" fillOpacity="0.07"/>
+            <ellipse cx="290" cy="660" rx="190" ry="110" fill="#41C300" fillOpacity="0.04"/>
+          </svg>
+          {/* Soft Floating Blobs */}
+          <div className="absolute w-[320px] h-[320px] left-[7vw] top-[58vh] bg-[#41C300] rounded-full blur-3xl opacity-16 z-10 animate-blob" style={{ animationDelay: '0s' }} />
+          <div className="absolute w-[210px] h-[210px] right-[8vw] top-[18vh] bg-[#3E990A] rounded-full blur-3xl opacity-16 z-10 animate-blob" style={{ animationDelay: '3s' }} />
+          <div className="absolute w-[150px] h-[150px] left-[44vw] top-[74vh] bg-[#41C300] rounded-full blur-3xl opacity-16 z-10 animate-blob" style={{ animationDelay: '7s' }} />
+          {/* Main Glassmorphic Hero Panel */}
+          <div 
+            className="max-w-[750px] w-full md:w-auto mx-auto p-8 md:p-6 rounded-[26px] bg-gradient-to-br from-[rgba(20,25,51,0.05)] to-[rgba(27,41,80,0.05)] backdrop-blur-xl border-2 border-[#41C3001A] shadow-[0_0_88px_#41C30022,0_6px_40px_#19204D20] text-center relative z-20 animate-fade-slide-up flex-shrink-0"
+            style={{ maxHeight: '600px', animation: 'borderPulse 5s infinite alternate' }}
+          >
+            <h1 
+              className="text-3xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-[#41C300] via-[#fff] to-[#3E990A] bg-[length:240%_auto] bg-clip-text text-transparent animate-hero-gradient"
+              style={{ letterSpacing: '-1.1px', textShadow: '0 2px 16px #41C3002a, 0 1px 1px #0e1500', filter: 'drop-shadow(0 7px 36px #41C30019)' }}
+              aria-label="Welcome to TrivianEdge - Results that Speak"
+            >
+              Welcome to TrivianEdge
+            </h1>
+            <div 
+              className="text-lg md:text-xl font-semibold text-white mb-4"
+              style={{ textShadow: '0 2px 18px #19204D88', letterSpacing: '-0.5px' }}
+              aria-label="Where we deliver transformation"
+            >
+              Where we don’t just pitch — we deliver transformation.
+            </div>
+            <p className="text-base md:text-lg text-[#e0f0ff] mb-1" aria-label="Mission statement">Our mission is to bridge the gap between visionary concepts and flawless execution.</p>
+            <p className="text-base md:text-lg text-[#e0f0ff] mb-1" aria-label="Execution focus">We embed swiftly, align seamlessly, and execute with relentless precision.</p>
+            <p className="text-base md:text-lg text-[#e0f0ff] mb-1" aria-label="Strategic advantage">Whether scaling up or removing obstacles, our team becomes your strategic advantage.</p>
+            <p className="text-lg md:text-xl font-bold text-[#41C300] mb-1 animate-greenpulse" style={{ filter: 'drop-shadow(0 0 18px #41C30099)', textShadow: '0 2px 9px #19204D44' }} aria-label="No fluff, no drag">No fluff. No drag.</p>
+            <p className="text-base md:text-lg text-[#e0f0ff] mb-2" aria-label="Precision engine">Just a precision engine designed for founders, growth, and results that speak volumes.</p>
+            <p className="text-base md:text-lg text-[#e0f0ff] mb-4" aria-label="Case study invitation">Explore our case studies to see how we’ve helped businesses like yours achieve remarkable success.</p>
+            <a 
+              href="/case-studies" 
+              className="inline-block px-8 py-3 bg-gradient-to-r from-[#41C300] to-[#3E990A] text-white font-bold rounded-[22px] shadow-[0_0_42px_#41C30060,0_2px_16px_#3E990A44] hover:bg-gradient-to-l hover:from-[#3E990A] hover:to-[#41C300] hover:scale-105 hover:-translate-y-1 transition-all animate-ctaglow"
+              role="button" 
+              aria-label="See the Transformation"
+            >
+              See the Transformation
+            </a>
+            {/* Shine flare effect */}
+            <span 
+              className="absolute top-[18%] left-1/2 w-0 h-[60%] border-l-[20px] border-solid border-[rgba(255,255,255,0.12)] rounded-[8px] blur-[7px] opacity-35 animate-shineFlare"
+              style={{ transform: 'translateX(-70%)', zIndex: 9, pointerEvents: 'none' }}
+            />
+          </div>
+        </section>
+      );
+    }
+
+    // Animations
+    const styles = `
+      @keyframes aurora-move { 0% { transform: scale(1.04) translateY(-4px); } 100% { transform: scale(1.07) translateY(22px); } }
+      @keyframes blob-float { 0% { transform: translateY(0) scale(1); } 60% { transform: translateY(-19px) scale(1.07); } 100% { transform: translateY(0) scale(1); } }
+      @keyframes borderPulse { 0% { box-shadow: 0 0 88px #41C30022, 0 6px 40px #19204D20, 0 0 0 0 #41C30022; } 100% { box-shadow: 0 0 88px #41C30044, 0 6px 50px #19204D40, 0 0 40px 6px #41C30011; } }
+      @keyframes hero-gradient { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
+      @keyframes fade-slide-up { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes shineFlare { 0% { left: 20%; opacity: 0; } 12% { opacity: 1; } 19% { left: 90%; opacity: 0.32; } 22% { opacity: 0; } 100% { left: 120%; opacity: 0; } }
+      @keyframes greenpulse { 0% { text-shadow: 0 0 8px #41C30040; } 100% { text-shadow: 0 0 22px #41C300cc, 0 2px 9px #19204D44; } }
+      @keyframes ctaglow { 0% { box-shadow: 0 0 42px #41C30060, 0 2px 16px #3E990A44; } 100% { box-shadow: 0 0 80px #41C300b0, 0 6px 28px #3E990A66; } }
+      .animate-blob { animation: blob-float 13s infinite alternate cubic-bezier(.86,0,.39,1.06); }
+      .animate-hero-gradient { animation: hero-gradient 7s linear infinite alternate; }
+      .animate-fade-slide-up { animation: fade-slide-up 1.2s 0.12s both; }
+      .animate-shineFlare { animation: shineFlare 4.4s 0.6s infinite linear; }
+      .animate-greenpulse { animation: greenpulse 2.7s infinite alternate; }
+      .animate-ctaglow { animation: ctaglow 2.6s infinite alternate; }
+    `;
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = styles;
+    document.head.appendChild(styleSheet);
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<HeroSection />);
+  </script>
+</body>
+</html>
